@@ -13,6 +13,26 @@ Use `/digest <youtube-url>` to generate a newsletter. See `.claude/commands/dige
 ## Output
 
 Newsletters are saved to `output/YYYY-MM-DD/{slug}-newsletter.html`.
+Cleaned transcripts are saved alongside as `{guest-slug}-transcript.docx`.
+
+## Skill File
+
+The full skill spec lives in `docs/youtube-summary.skill` (ZIP archive containing `youtube-summary/SKILL.md`).
+
+## Content Guidelines
+
+**Transcript-first:** Re-read the transcript before composing. Use the speaker's actual language and phrasing. Preserve specifics: tools named, numbers cited, stories told. The newsletter should feel like you were in the room.
+
+**Flexible structure:** Choose the format that fits the episode:
+- **Q&A** — interview-style with clear back-and-forth
+- **Narrative** — one big thesis developed progressively
+- **Tutorial** — how-to or process breakdowns
+- **Debate** — multi-guest, surface tension and disagreements
+- **Hybrid** — mix freely (narrative intro + Q&As + checklist)
+
+**No limits:** Cover the episode exhaustively. There is NO cap on Q&As or sections. Each Q&A answer should be 3-8+ sentences grounded in the transcript.
+
+**Screenshots are mandatory:** Always capture 6-10 screenshots from key video moments using Playwright MCP. Seek the video to specific timestamps, capture frames, convert to base64, and embed inside Q&A answers using `.slide-wrapper` / `.slide-img`. Screenshots make newsletters dramatically more engaging — aim for at least 1 per thematic section. The HTML must remain self-contained (base64 data URIs, no external image files).
 
 ---
 
@@ -97,10 +117,13 @@ This is the complete design spec for all generated newsletters. Every HTML newsl
 
 Contains (in order):
 1. **Intro callout** — emoji + 2–3 sentences on why this episode matters
-2. **Core message cards** — 2-column grid, 3–5 cards, last odd card spans full width
-3. **Section divider + label** — `KEY TAKEAWAYS` or `10 QUESTIONS`
-4. **10 Q&A items** — each `.qa-item` with `.qa-question` and `.qa-answer`
-5. **Pull quote** — single best quotable line, Lora italic, blue left border
+2. **Results banner** — horizontal flex row of 3–4 key stats (big orange numbers)
+3. **Core message cards** — 2-column grid, 3–5 cards with `.core-card-tag`, last odd card spans full width
+4. **Thematic sections** — Q&As grouped into `<section class="section">` blocks, each with `section-label` (PART N), `section-title`, `section-desc`, and a `qa-list`
+5. **Highlight boxes** — green ACTION callouts inside Q&A answers where actionable advice appears
+6. **Pull quotes** — distributed within sections (not just at the end) for visual rhythm
+7. **Action plan** — `.phase-list` with `.phase-badge` (STEP 1–N) steps at the end
+8. **Final pull quote** — single best quotable line, Lora italic, blue left border
 
 ### Q&A Item HTML
 
@@ -116,13 +139,68 @@ Contains (in order):
 </div>
 ```
 
+### Results Banner HTML
+
+```html
+<div class="results-banner">
+  <div class="result-item">
+    <span class="result-num">[big number]</span>
+    <span class="result-label">[short label]</span>
+  </div>
+  <!-- 3-4 items -->
+</div>
+```
+
 ### Core Card HTML
 
 ```html
 <div class="core-card [full-width if last and odd]">
+  <span class="core-card-tag">[CATEGORY LABEL]</span>
   <span class="core-card-icon">[emoji]</span>
   <div class="core-card-title">[Short title]</div>
   <div class="core-card-desc">[2-3 sentence description]</div>
+</div>
+```
+
+### Section HTML
+
+```html
+<section class="section">
+  <div class="section-label">PART [N]</div>
+  <h2 class="section-title">[Topic Title]</h2>
+  <p class="section-desc">[Brief description of this section.]</p>
+  <div class="qa-list">
+    <!-- Q&A items for this topic -->
+  </div>
+  <!-- Optional: pull-quote within section -->
+</section>
+```
+
+### Highlight Box HTML (inside `.qa-answer`)
+
+```html
+<div class="highlight-box">
+  <p><strong>📌 ACTION:</strong> [actionable advice here]</p>
+</div>
+```
+
+### Slide Wrapper HTML (images inside `.qa-answer`)
+
+```html
+<div class="slide-wrapper">
+  <img class="slide-img" src="data:image/jpeg;base64,[DATA]" alt="[description]">
+  <div class="slide-caption">[Caption describing the screenshot]</div>
+</div>
+```
+
+### Phase List HTML (action plan)
+
+```html
+<div class="phase-list">
+  <div class="phase-item">
+    <span class="phase-badge">STEP [N]</span>
+    <div class="phase-text"><strong>[Title]</strong> [Description]</div>
+  </div>
 </div>
 ```
 
@@ -455,6 +533,151 @@ body {
 }
 
 .qa-answer p + p { padding-top: 10px; }
+
+/* Results Banner */
+.results-banner {
+  display: flex;
+  gap: 0;
+  background: linear-gradient(135deg, var(--accent-orange-light) 0%, #fff8f3 100%);
+  border: 1px solid #f0d4bb;
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  padding: 8px 12px;
+  border-right: 1px solid rgba(217,115,13,0.2);
+}
+
+.result-item:last-child { border-right: none; }
+
+.result-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  display: block;
+  line-height: 1.2;
+}
+
+.result-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Sections */
+.section { margin-bottom: 36px; }
+
+.section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.35;
+}
+
+.section-desc {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Core Card Tag */
+.core-card-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--tag-bg);
+  color: var(--text-muted);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-bottom: 6px;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: var(--accent-green-light);
+  border: 1px solid #a8d9d2;
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+.highlight-box strong { color: var(--accent-green); }
+
+/* Slide Wrapper */
+.slide-wrapper {
+  margin: 14px 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.slide-img {
+  width: 100%;
+  display: block;
+}
+
+.slide-caption {
+  padding: 8px 14px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border-soft);
+}
+
+/* Phase List */
+.phase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.phase-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.phase-badge {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--accent-blue-light);
+  color: var(--accent-blue);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.phase-text {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.phase-text strong { color: var(--text-primary); font-weight: 600; }
 ```
 
 ### Quality Checklist
@@ -464,7 +687,15 @@ Before saving any newsletter, verify:
 - [ ] Header h1 has `<em>` wrapping the most evocative phrase
 - [ ] `.header-meta` is `flex-direction: column` — chips row above button
 - [ ] "Watch on YouTube" button links to the actual YouTube URL
-- [ ] All 10 Q&As are substantive (not generic filler)
+- [ ] Results banner has 3-4 key stats from the episode
+- [ ] Q&As are organized into thematic `<section>` blocks (PART 1, 2, etc.)
+- [ ] All Q&As are substantive (not generic filler)
+- [ ] Highlight boxes with ACTION callouts in relevant Q&A answers
+- [ ] Pull quotes distributed within sections, plus final pull quote
+- [ ] Action plan uses `.phase-list` with concrete steps
+- [ ] Core cards have `.core-card-tag` labels
 - [ ] Pull quote is a real, quotable line (not a summary)
-- [ ] HTML is self-contained (no external CSS other than Google Fonts)
+- [ ] 6-10 screenshots captured via Playwright and embedded as base64 `.slide-wrapper` / `.slide-img` / `.slide-caption`
+- [ ] At least 1 screenshot per thematic section, placed contextually inside Q&A answers
+- [ ] HTML is self-contained (no external CSS other than Google Fonts, images as base64 data URIs)
 - [ ] File saved to `output/YYYY-MM-DD/{slug}-newsletter.html`
