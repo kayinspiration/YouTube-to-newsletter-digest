@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>올랜도 가족여행 계획표 | 2026년 3월 16~21일</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f7f6f3;
+  --bg-hover: #efeeeb;
+  --border: #e8e7e3;
+  --border-soft: #f0efec;
+  --text-primary: #37352f;
+  --text-secondary: #787774;
+  --text-muted: #b5b3ad;
+  --accent-blue: #2383e2;
+  --accent-blue-light: #e8f1fb;
+  --accent-orange: #d9730d;
+  --accent-orange-light: #fbecdd;
+  --accent-green: #0f7b6c;
+  --accent-green-light: #dcf3ef;
+  --accent-purple: #6940a5;
+  --accent-purple-light: #f3effe;
+  --accent-red: #e03e3e;
+  --accent-red-light: #fbe4e4;
+  --accent-yellow: #dfab01;
+  --accent-yellow-light: #fef3cd;
+  --tag-bg: #f1f0ed;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.06), 0 2px 4px rgba(0,0,0,0.04);
+  --radius: 6px;
+  --radius-lg: 10px;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans KR', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f2f1ed;
+  color: var(--text-primary);
+  line-height: 1.7;
+  min-height: 100vh;
+  padding: 40px 20px 80px;
+}
+
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--bg);
+  border-radius: 14px;
+  box-shadow: var(--shadow-md), 0 0 0 1px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+/* ── HEADER ── */
+.header {
+  background: linear-gradient(135deg, #141413 0%, #1c1410 55%, #251b0e 100%);
+  padding: 52px 56px 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.header-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.8);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header-dot {
+  width: 6px; height: 6px;
+  background: #d97757;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+.header h1 {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+  position: relative;
+}
+
+.header h1 em {
+  font-style: italic;
+  color: #d97757;
+}
+
+.header-subtitle {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  position: relative;
+}
+
+.meta-chips {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meta-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 100px;
+  padding: 5px 12px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+}
+
+.meta-chip svg { opacity: 0.7; flex-shrink: 0; }
+
+/* ── BODY ── */
+.body { padding: 40px 56px 56px; }
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 32px 0;
+}
+
+/* ── CALLOUT ── */
+.callout {
+  display: flex;
+  gap: 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+
+.callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+.callout-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.callout-text strong { color: var(--text-primary); font-weight: 600; }
+
+/* ── RESULTS BANNER ── */
+.results-banner {
+  display: flex;
+  gap: 0;
+  background: linear-gradient(135deg, var(--accent-orange-light) 0%, #fff8f3 100%);
+  border: 1px solid #f0d4bb;
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.result-item {
+  flex: 1;
+  min-width: 100px;
+  text-align: center;
+  padding: 8px 12px;
+  border-right: 1px solid rgba(217,115,13,0.2);
+}
+
+.result-item:last-child { border-right: none; }
+
+.result-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent-orange);
+  display: block;
+  line-height: 1.2;
+}
+
+.result-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── DAY CARD ── */
+.day-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: box-shadow 0.15s;
+}
+
+.day-card:hover { box-shadow: var(--shadow-sm); }
+
+.day-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--bg);
+}
+
+.day-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  border-radius: 6px;
+  padding: 5px 10px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.day-badge.blue { background: var(--accent-blue-light); color: var(--accent-blue); }
+.day-badge.orange { background: var(--accent-orange-light); color: var(--accent-orange); }
+.day-badge.green { background: var(--accent-green-light); color: var(--accent-green); }
+.day-badge.purple { background: var(--accent-purple-light); color: var(--accent-purple); }
+.day-badge.red { background: var(--accent-red-light); color: var(--accent-red); }
+
+.day-title-area { flex: 1; }
+
+.day-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.day-date {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.day-body {
+  padding: 0 22px 22px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ── TIMELINE ── */
+.timeline {
+  padding-top: 18px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline-item:last-child::before { display: none; }
+
+.timeline-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 44px;
+  padding-top: 2px;
+  text-align: right;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-blue);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.timeline-dot.orange { background: var(--accent-orange); }
+.timeline-dot.green { background: var(--accent-green); }
+.timeline-dot.purple { background: var(--accent-purple); }
+.timeline-dot.red { background: var(--accent-red); }
+
+.timeline-content { flex: 1; }
+
+.timeline-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.timeline-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-top: 4px;
+}
+
+/* ── INFO TAGS ── */
+.info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.info-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--tag-bg);
+  color: var(--text-muted);
+}
+
+.info-tag.price { background: var(--accent-green-light); color: var(--accent-green); }
+.info-tag.drive { background: var(--accent-blue-light); color: var(--accent-blue); }
+.info-tag.time { background: var(--accent-purple-light); color: var(--accent-purple); }
+.info-tag.food { background: var(--accent-orange-light); color: var(--accent-orange); }
+
+/* ── HIGHLIGHT BOX ── */
+.highlight-box {
+  background: var(--accent-green-light);
+  border: 1px solid #a8d9d2;
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+.highlight-box strong { color: var(--accent-green); }
+
+/* ── FOOD SPOT ── */
+.food-spot {
+  background: var(--accent-orange-light);
+  border: 1px solid #f0d4bb;
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  margin-top: 10px;
+}
+
+.food-spot-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-orange);
+  margin-bottom: 4px;
+}
+
+.food-spot-desc {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── BUDGET TABLE ── */
+.budget-section {
+  margin-top: 32px;
+}
+
+.budget-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+
+.budget-table th {
+  text-align: left;
+  padding: 10px 14px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.budget-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.budget-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.budget-table tr:last-child td {
+  background: var(--accent-orange-light);
+  color: var(--accent-orange);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ── PULL QUOTE ── */
+.pull-quote {
+  border-left: 3px solid var(--accent-blue);
+  padding: 14px 20px;
+  margin: 28px 0;
+  background: var(--accent-blue-light);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.pull-quote p {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+.pull-quote cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* ── PACKING LIST ── */
+.packing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.packing-card {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+}
+
+.packing-card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.packing-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.packing-card li {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  padding: 2px 0;
+  line-height: 1.5;
+}
+
+.packing-card li::before {
+  content: '  ';
+  margin-right: 6px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .header { padding: 36px 24px 32px; }
+  .header h1 { font-size: 24px; }
+  .body { padding: 28px 24px 40px; }
+  .day-header { padding: 14px 16px; }
+  .day-body { padding: 0 16px 16px; }
+  .results-banner { flex-direction: column; }
+  .result-item { border-right: none; border-bottom: 1px solid rgba(217,115,13,0.2); padding: 10px 0; }
+  .result-item:last-child { border-bottom: none; }
+  .packing-grid { grid-template-columns: 1fr; }
+  .meta-chips { gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <!-- ════════════ HEADER ════════════ -->
+  <div class="header">
+    <div class="header-tag">
+      <span class="header-dot"></span>
+      FAMILY TRIP PLANNER
+    </div>
+    <h1>올랜도 <em>5박 6일</em> 가족여행 계획표</h1>
+    <p class="header-subtitle">
+      유니버셜 스튜디오, 케네디 스페이스 센터, 그리고 플로리다의 자연과 식도락까지.
+      워털루에서 차로 떠나는 완벽한 가족 로드트립.
+    </p>
+    <div class="header-meta">
+      <div class="meta-chips">
+        <span class="meta-chip">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          어른 2명 + 딸 (12세)
+        </span>
+        <span class="meta-chip">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/></svg>
+          2026년 3월 16일 ~ 21일
+        </span>
+        <span class="meta-chip">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>
+          자동차 여행 (워털루 ON)
+        </span>
+        <span class="meta-chip">
+          <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+          ~19.5시간 편도
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════ BODY ════════════ -->
+  <div class="body">
+
+    <!-- INTRO CALLOUT -->
+    <div class="callout">
+      <span class="callout-icon">&#127876;</span>
+      <div class="callout-text">
+        <strong>올랜도는 테마파크만이 아닙니다.</strong> 플로리다의 맑은 샘, 에어보트에서 만나는 야생 악어, 로컬 푸드홀의 숨겨진 맛집까지 — 12살 딸과 함께 즐길 수 있는 다채로운 경험이 100km 안에 가득합니다. 이 계획표는 유니버셜 2일, 케네디 스페이스 센터 1일에 더해 <strong>식도락과 자연 탐험</strong>으로 채운 나머지 2일의 완벽한 동선을 제안합니다.
+      </div>
+    </div>
+
+    <!-- RESULTS BANNER -->
+    <div class="results-banner">
+      <div class="result-item">
+        <span class="result-num">5박 6일</span>
+        <span class="result-label">총 일정</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">~2,100km</span>
+        <span class="result-label">편도 거리</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">6곳</span>
+        <span class="result-label">주요 방문지</span>
+      </div>
+      <div class="result-item">
+        <span class="result-num">~$1,150</span>
+        <span class="result-label">입장료 총 예상</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════ DAY 1 — MONDAY ═══════ -->
+    <div class="section-label">DAY 1</div>
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-badge blue">MON</span>
+        <div class="day-title-area">
+          <div class="day-title">Kennedy Space Center</div>
+          <div class="day-date">3월 16일 (월) &middot; 우주 탐험의 날</div>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">8:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">호텔 출발 &rarr; 케네디 스페이스 센터</div>
+              <div class="timeline-desc">I-528 East (Beachline Expressway) &rarr; SR-405. 유니버셜 근처 숙소 기준.</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~1시간 (약 80km)</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">9:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">KSC 도착 &amp; 입장</div>
+              <div class="timeline-desc">오프닝과 동시에 입장. 먼저 <strong>KSC Bus Tour</strong>를 타고 Apollo/Saturn V Center 관람. 실제 Saturn V 로켓 실물을 볼 수 있어 12살 딸에게 최고의 교육 경험입니다.</div>
+              <div class="info-tags">
+                <span class="info-tag price">어른 $75 / 아이(3-11) $65</span>
+                <span class="info-tag price">12세는 어른 요금</span>
+                <span class="info-tag price">주차 $15</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">11:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Space Shuttle Atlantis 전시관</div>
+              <div class="timeline-desc">실제 우주왕복선 아틀란티스를 가까이서 관람. 인터랙티브 시뮬레이터와 우주비행사 체험존이 있습니다. Shuttle Launch Experience 시뮬레이터는 필수!</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">13:00</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">점심 — Orbit Cafe</div>
+              <div class="timeline-desc">KSC 내부 카페테리아. 버거, 샐러드, 피자 등 다양한 메뉴. 센터 밖으로 나가면 재입장이 번거로우니 내부에서 해결 추천.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127829; 1인 $15~20</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">14:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Rocket Garden &amp; Astronaut Encounter</div>
+              <div class="timeline-desc">역대 로켓들이 전시된 야외 Rocket Garden 산책 후, Astronaut Encounter에서 실제 우주비행사의 이야기를 들어보세요. 현직/퇴직 우주비행사가 매일 등장합니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">16:00</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">기프트샵 &amp; 출발</div>
+              <div class="timeline-desc">우주 관련 기념품과 NASA 굿즈가 풍성합니다. 딸에게 좋은 선물!</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">18:00</div>
+            <div class="timeline-dot green"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">저녁 — Cocoa Beach 해변가 식당</div>
+              <div class="timeline-desc">돌아오는 길에 Cocoa Beach에 들러 해산물 디너. <strong>Grills Seafood Deck & Tiki Bar</strong> 또는 <strong>Fat Snook</strong> 추천. 대서양 석양을 보며 첫날을 마무리합니다.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127869; 가족 3인 $60~90</span>
+                <span class="info-tag drive">&#128663; Cocoa Beach &rarr; 호텔 ~1시간</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>&#128204; TIP:</strong> 할인 티켓은 <a href="https://www.undercovertourist.com/orlando/kennedy-space-center-general-admission-ticket/" target="_blank">Undercover Tourist</a>에서 $5 할인된 가격에 구매 가능합니다. 단, 로켓 발사일에는 할인 티켓 사용 불가 — 발사 일정은 KSC 공식 사이트에서 확인하세요!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ DAY 2 — TUESDAY (추천!) ═══════ -->
+    <div class="section-label">DAY 2 — 추천 일정</div>
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-badge green">TUE</span>
+        <div class="day-title-area">
+          <div class="day-title">플로리다 자연 &amp; ICON Park 식도락</div>
+          <div class="day-date">3월 17일 (화) &middot; 에어보트 + 도심 탐험</div>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">8:30</div>
+            <div class="timeline-dot green"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">호텔 출발 &rarr; Boggy Creek Airboat Adventures</div>
+              <div class="timeline-desc">유니버셜에서 남쪽으로 약 40분. 플로리다의 진짜 자연을 만나는 에어보트 투어입니다.</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~40분 (Kissimmee)</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">9:30</div>
+            <div class="timeline-dot green"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">에어보트 투어 (30분~1시간)</div>
+              <div class="timeline-desc">플로리다 습지를 에어보트로 질주하며 야생 악어, 거북이, 대머리독수리를 만납니다. 나이 제한 없어 온 가족이 즐길 수 있습니다. <strong>Ultimate Package</strong>를 선택하면 보석 채굴 체험(Gem Mine)과 나비 먹이주기까지 포함!</div>
+              <div class="info-tags">
+                <span class="info-tag price">30분 투어 어른 $35 / 아이 $30</span>
+                <span class="info-tag price">1시간 투어 +$20</span>
+                <span class="info-tag time">&#9200; 9:00~17:30 30분 간격 출발</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">11:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">점심 &amp; 이동 &rarr; ICON Park (International Drive)</div>
+              <div class="timeline-desc">Kissimmee에서 ICON Park까지 약 25분. 입장 무료, 주차 무료!</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~25분</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">12:00</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">ICON Park 점심 — Sugar Factory</div>
+              <div class="timeline-desc"><strong>Sugar Factory</strong>에서 거대한 아이스크림 샌드위치와 스모킹 목테일로 12살 딸의 마음을 사로잡으세요. 화려한 디저트와 인스타그래머블한 음식들이 가득합니다.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127848; 1인 $20~35</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">13:30</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">The Orlando Eye (관람차)</div>
+              <div class="timeline-desc">400피트(122m) 높이에서 올랜도 360도 전경을 조망. 에어컨 캡슐에서 약 22분간 편안하게 즐기는 경험입니다.</div>
+              <div class="info-tags">
+                <span class="info-tag price">어른 $39 / 콤보(+SEA LIFE) +$10</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">14:30</div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">SEA LIFE Orlando Aquarium</div>
+              <div class="timeline-desc">플로리다 유일의 360도 해저 터널을 걸으며 수천 마리 해양 생물을 관찰. 콤보 티켓으로 $10 추가만 하면 됩니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">15:30</div>
+            <div class="timeline-dot purple"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Madame Tussauds Orlando (선택)</div>
+              <div class="timeline-desc">Big Three 콤보를 구매했다면 밀랍인형 박물관도 방문. 셀럽, 슈퍼히어로와 재미있는 사진을 찍어보세요.</div>
+              <div class="info-tags">
+                <span class="info-tag price">Big Three 콤보: ~$59</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">17:00</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">International Drive 산책 &amp; 쇼핑</div>
+              <div class="timeline-desc">ICON Park 주변 International Drive는 올랜도 최대 관광거리. 다양한 상점과 엔터테인먼트가 즐비합니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">18:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">저녁 — Caf&eacute; Tu Tu Tango</div>
+              <div class="timeline-desc">I-Drive 명물! 스페인 아티스트 로프트 분위기의 타파스 레스토랑. 라이브 아티스트가 그림을 그리는 모습을 보며 다양한 소량 요리를 맛볼 수 있어 <strong>식도락 가족에게 완벽</strong>합니다.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127858; 가족 3인 $60~80</span>
+                <span class="info-tag drive">&#128663; 호텔까지 ~10분</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-spot">
+          <div class="food-spot-title">&#127860; 식도락 대안 옵션</div>
+          <div class="food-spot-desc">
+            <strong>Toothsome Chocolate Emporium</strong> (Universal CityWalk) — 유니버셜 파크 입장 없이 방문 가능. 스팀펑크 분위기에서 화려한 밀크쉐이크와 디저트를 즐길 수 있습니다.<br>
+            <strong>The Kitty Beautiful</strong> (Cat Caf&eacute;) — 고양이 모양 그릴드 치즈와 함께 입양 가능한 고양이들과 놀 수 있는 카페. 딸이 좋아할 것!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>"플로리다의 습지에서 악어를 만나고, 400피트 위에서 올랜도를 내려다보고, 스페인풍 타파스로 하루를 마무리하는 — 테마파크 없이도 완벽한 하루."</p>
+      <cite>— 화요일 추천 일정 하이라이트</cite>
+    </div>
+
+    <!-- ═══════ DAY 3 — WEDNESDAY ═══════ -->
+    <div class="section-label">DAY 3</div>
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-badge orange">WED</span>
+        <div class="day-title-area">
+          <div class="day-title">Universal Studios Florida</div>
+          <div class="day-date">3월 18일 (수) &middot; 첫 번째 유니버셜 데이</div>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">8:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">유니버셜 스튜디오 &amp; Islands of Adventure</div>
+              <div class="timeline-desc">Park-to-Park 티켓으로 두 파크를 자유롭게 오가세요. <strong>Wizarding World of Harry Potter</strong>의 호그와트 익스프레스를 타려면 Park-to-Park 필수! 오프닝에 맞춰 도착하면 인기 라이드 대기시간을 크게 줄일 수 있습니다.</div>
+              <div class="info-tags">
+                <span class="info-tag price">3-Park P2P: 어른 ~$138 / 아이 ~$135</span>
+                <span class="info-tag time">&#9200; 보통 9:00 오픈</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">오전</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">필수 라이드 — 오전 공략</div>
+              <div class="timeline-desc">
+                <strong>Hagrid's Magical Creatures Motorbike Adventure</strong> (가장 인기, 일찍 갈 것!)<br>
+                <strong>Velocicoaster</strong> (스릴 라이드 최고봉)<br>
+                <strong>Harry Potter and the Forbidden Journey</strong><br>
+                오전에 Islands of Adventure 쪽을 먼저 공략하는 것이 효율적.
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">12:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">점심 — Three Broomsticks (호그와트)</div>
+              <div class="timeline-desc">Wizarding World 안에 있는 테마 레스토랑. 버터비어와 셰퍼드 파이를 맛보세요. 해리포터 팬이라면 필수 경험!</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127866; 버터비어 ~$8</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">오후</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">오후 라이드 &amp; 쇼</div>
+              <div class="timeline-desc">
+                <strong>Hollywood Rip Ride Rockit</strong> (Universal Studios 쪽)<br>
+                <strong>Revenge of the Mummy</strong><br>
+                <strong>Transformers: The Ride 3D</strong><br>
+                <strong>DreamWorks Land</strong> — 가족 친화 존
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">19:00</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">저녁 — Universal CityWalk</div>
+              <div class="timeline-desc">파크 퇴장 후 CityWalk에서 저녁. <strong>Cowfish</strong> (스시+버거 퓨전), <strong>Antojitos</strong> (정통 멕시칸), <strong>Vivo Italian Kitchen</strong> 추천. 입장료 없이 자유롭게 방문 가능.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127869; 가족 3인 $70~100</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>&#128204; TIP:</strong> 멀티데이 티켓(3일 이상)을 구매하면 1일 $65~80 수준까지 내려갑니다. 2일 유니버셜 + Epic Universe를 고려 중이라면 3-Park 멀티데이가 가장 경제적! <a href="https://www.universalorlando.com/web/en/us/tickets-packages/park-tickets" target="_blank">공식 티켓 페이지</a>에서 확인하세요.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ DAY 4 — THURSDAY (추천!) ═══════ -->
+    <div class="section-label">DAY 4 — 추천 일정</div>
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-badge purple">THU</span>
+        <div class="day-title-area">
+          <div class="day-title">블루 스프링 &amp; Winter Garden 식도락</div>
+          <div class="day-date">3월 19일 (목) &middot; 플로리다의 맑은 샘 + 로컬 푸드홀</div>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">8:00</div>
+            <div class="timeline-dot purple"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">호텔 출발 &rarr; Blue Spring State Park</div>
+              <div class="timeline-desc">올랜도에서 북쪽으로 약 45분. 수정처럼 맑은 1등급 샘(First Magnitude Spring)이 있는 주립공원입니다.</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~45분 (Orange City)</span>
+                <span class="info-tag price">차량당 입장료 $6</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">9:00</div>
+            <div class="timeline-dot purple"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Blue Spring 보드워크 산책 &amp; 자연 탐험</div>
+              <div class="timeline-desc">72&deg;F(22&deg;C) 일정 수온의 크리스탈 블루 샘을 따라 500미터 보드워크를 산책합니다. 3월 중순이면 매너티(바다소) 시즌 막바지 — 운이 좋으면 매너티를 볼 수 있습니다! 수영과 카약도 가능(매너티 시즌 종료 후).</div>
+              <div class="info-tags">
+                <span class="info-tag time">&#9200; 일출~일몰, 365일 개장</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">10:30</div>
+            <div class="timeline-dot purple"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">카약 또는 자연 트레일 하이킹</div>
+              <div class="timeline-desc">수영 가능 시기라면 샘에서 수영도 좋고, 공원 내 트레일을 따라 플로리다 원시 자연을 산책. 세인트 존스 강(St. Johns River)을 따라가는 길이 아름답습니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">12:00</div>
+            <div class="timeline-dot green"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">이동 &rarr; Winter Garden 다운타운</div>
+              <div class="timeline-desc">Blue Spring에서 남서쪽으로 약 50분. 올랜도 서쪽의 매력적인 소도시 Winter Garden으로 향합니다.</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~50분</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">13:00</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">점심 — Plant Street Market</div>
+              <div class="timeline-desc">20개 벤더가 모인 로컬 푸드홀. 스시, 엠파나다, 세비체, BBQ 등 다양한 선택지! <strong>Crooked Can Brewing</strong>(어른용)과 넓은 야외 파티오에서 오크나무 아래 여유로운 식사. 아이들이 뛰어놀 수 있는 녹지 공간도 있습니다.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127860; 1인 $12~20</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">14:30</div>
+            <div class="timeline-dot green"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Winter Garden 다운타운 산책</div>
+              <div class="timeline-desc">역사적인 다운타운 Plant Street를 따라 골동품 상점, 부티크, 아이스크림 가게를 구경. <strong>Garden Theatre</strong>(1935년 건축)의 아름다운 외관도 감상하세요. West Orange Trail 자전거 도로도 지나갑니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">16:00</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">이동 &rarr; East End Market (Audubon Park)</div>
+              <div class="timeline-desc">Winter Garden에서 약 30분. 올랜도 힙스터들의 성지, Audubon Park Garden District의 아티즈널 푸드 마켓.</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~30분</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">16:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">East End Market 간식 &amp; 쇼핑</div>
+              <div class="timeline-desc">2층 건물에 로컬 셰프들의 가게가 모여있는 네이버후드 마켓. 수제 초콜릿, 아티즌 커피, 비건 비스킷 등 유니크한 먹거리. Audubon Park 주변 독립 서점과 빈티지 숍도 산책하기 좋습니다.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#9749; 간식 1인 $8~15</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">18:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">저녁 — Maxine's on Shine</div>
+              <div class="timeline-desc">미슐랭 추천 레스토랑(2022~2025 연속). 랍스터 라비올리, 스킬렛 라자냐가 시그니처 메뉴. 아담한 동네 레스토랑 분위기에서 진짜 올랜도 로컬 다이닝을 경험하세요.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127869; 가족 3인 $80~120</span>
+                <span class="info-tag drive">&#128663; 호텔까지 ~20분</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-spot">
+          <div class="food-spot-title">&#127860; 목요일 식도락 대안 옵션</div>
+          <div class="food-spot-desc">
+            <strong>The Great Southern Box Company</strong> (Packing District) — 옛 감귤 창고를 개조한 푸드홀. 쿠바 크로케타부터 자메이카 저크 치킨까지 이민자 요리의 천국.<br>
+            <strong>Old Sugar Mill Pancake House</strong> (DeLeon Springs) — Blue Spring 근처! 테이블에서 직접 팬케이크를 구워먹는 독특한 경험. 가족 필수 방문.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>"72도 수정 같은 샘에서 매너티를 만나고, 오크나무 아래 로컬 푸드홀에서 세비체와 크래프트 비어를 즐기고, 미슐랭 추천 레스토랑에서 하루를 마감하는 — 이것이 플로리다 식도락 여행의 정수."</p>
+      <cite>— 목요일 추천 일정 하이라이트</cite>
+    </div>
+
+    <!-- ═══════ DAY 5 — FRIDAY ═══════ -->
+    <div class="section-label">DAY 5</div>
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-badge orange">FRI</span>
+        <div class="day-title-area">
+          <div class="day-title">Universal Studios &amp; Epic Universe</div>
+          <div class="day-date">3월 20일 (금) &middot; 두 번째 유니버셜 데이</div>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">8:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Epic Universe 또는 놓친 라이드 공략</div>
+              <div class="timeline-desc">수요일에 못 탄 라이드 위주로 공략하거나, <strong>Epic Universe</strong>(2025년 오픈)를 방문! Super Nintendo World, Dark Universe, Wizarding World 확장판 등 완전히 새로운 파크입니다. 3-Park 티켓이라면 Epic Universe 포함.</div>
+              <div class="info-tags">
+                <span class="info-tag price">멀티데이 3-Park: ~$118/일</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">오전</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">Epic Universe 필수 경험</div>
+              <div class="timeline-desc">
+                <strong>Super Nintendo World</strong> — 마리오 카트 라이드, 파워업 밴드 인터랙티브 체험<br>
+                <strong>How to Train Your Dragon &mdash; Isle of Berk</strong><br>
+                <strong>Dark Universe</strong> — 클래식 유니버셜 몬스터 테마 영역
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">12:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">점심 — 파크 내 다이닝</div>
+              <div class="timeline-desc">Epic Universe 내 각 테마 영역마다 독특한 레스토랑이 있습니다. Super Nintendo World의 Toadstool Cafe가 특히 인기!</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127844; 1인 $15~25</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">오후</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">나머지 파크 자유 탐험</div>
+              <div class="timeline-desc">여유롭게 남은 어트랙션을 즐기고, 기념품 쇼핑. 마지막 유니버셜 데이이니 아쉬움 없이!</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">18:30</div>
+            <div class="timeline-dot orange"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">마지막 밤 저녁 — Wantilan Luau 또는 특별 디너</div>
+              <div class="timeline-desc">여행의 피날레! <strong>Wantilan Luau</strong> (Royal Pacific Resort) — 폴리네시안 뷔페와 훌라+파이어 댄스 공연. 또는 <strong>Nikki's Place</strong>에서 정통 소울 푸드로 플로리다 마지막 밤을 장식하세요.</div>
+              <div class="info-tags">
+                <span class="info-tag food">&#127860; Luau: 어른 ~$80 / 아이 ~$50</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ DAY 6 — SATURDAY ═══════ -->
+    <div class="section-label">DAY 6</div>
+    <div class="day-card">
+      <div class="day-header">
+        <span class="day-badge red">SAT</span>
+        <div class="day-title-area">
+          <div class="day-title">워털루 복귀</div>
+          <div class="day-date">3월 21일 (토) &middot; 귀가 드라이브</div>
+        </div>
+      </div>
+      <div class="day-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-time">7:00</div>
+            <div class="timeline-dot red"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">체크아웃 &amp; 출발</div>
+              <div class="timeline-desc">일찍 출발하여 하루 안에 도착하는 것이 목표. I-95 North 또는 I-75 North 루트. 중간에 2~3회 휴식 추천.</div>
+              <div class="info-tags">
+                <span class="info-tag drive">&#128663; ~2,100km / 약 19.5시간</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">12:00</div>
+            <div class="timeline-dot red"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">중간 휴식 — 사바나 또는 잭슨빌 (GA/FL 경계)</div>
+              <div class="timeline-desc">약 5시간 운전 후 점심 휴식. 사바나에 들르면 아름다운 역사 지구에서 30분 산책도 좋습니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">18:00</div>
+            <div class="timeline-dot red"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">저녁 휴식 — 샬롯 또는 리치몬드 (NC/VA)</div>
+              <div class="timeline-desc">추가 6시간 운전 후 저녁 식사와 휴식. 피로하면 이 근처에서 1박하는 것도 안전한 선택입니다.</div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-time">심야</div>
+            <div class="timeline-dot red"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">워털루 도착 (또는 중간 1박)</div>
+              <div class="timeline-desc">무정차 운전 시 새벽~아침 도착 예상. 안전을 위해 <strong>중간에 1박(리치몬드/피츠버그 근처)</strong>을 강력 추천합니다. 2일에 나눠 운전하면 약 10시간 + 9.5시간.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>&#128204; 안전 TIP:</strong> 19.5시간 논스톱 운전은 매우 위험합니다. 피츠버그 또는 리치몬드 근처에서 1박 하는 것을 강력 추천합니다. 교대 운전이 가능하다면 중간 도시에서 충분한 휴식을 취하세요.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════ BUDGET SUMMARY ═══════ -->
+    <div class="section-label">예산 요약</div>
+
+    <div class="budget-section">
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>항목</th>
+            <th>세부 내용</th>
+            <th>예상 비용 (USD)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>케네디 스페이스 센터</td>
+            <td>어른 2 x $75 + 아이 1 x $75 + 주차 $15</td>
+            <td>~$240</td>
+          </tr>
+          <tr>
+            <td>유니버셜 (2일)</td>
+            <td>3-Park 멀티데이 x 3인 (할인가 기준)</td>
+            <td>~$750</td>
+          </tr>
+          <tr>
+            <td>화요일 (에어보트+ICON Park)</td>
+            <td>에어보트 3인 ~$100 + Big Three 콤보 3인 ~$177</td>
+            <td>~$277</td>
+          </tr>
+          <tr>
+            <td>목요일 (블루스프링+식도락)</td>
+            <td>주립공원 $6 + 식사비</td>
+            <td>~$6 (입장만)</td>
+          </tr>
+          <tr>
+            <td>식사 (6일간)</td>
+            <td>아침(호텔/간단) + 점심 + 저녁, 3인 기준</td>
+            <td>~$600~900</td>
+          </tr>
+          <tr>
+            <td>가솔린 (왕복)</td>
+            <td>~4,200km + 현지 이동 ~300km</td>
+            <td>~$300~400</td>
+          </tr>
+          <tr>
+            <td>숙소 (5박)</td>
+            <td>유니버셜 근처 호텔/에어비앤비</td>
+            <td>~$600~1,200</td>
+          </tr>
+          <tr>
+            <td><strong>총 예상 비용</strong></td>
+            <td><strong>3인 가족 전체 (입장+식사+숙소+가솔린)</strong></td>
+            <td><strong>~$2,800~3,800</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══════ PACKING & TIPS ═══════ -->
+    <div class="section-label">준비물 &amp; 팁</div>
+
+    <div class="packing-grid">
+      <div class="packing-card">
+        <div class="packing-card-title">&#127890; 필수 준비물</div>
+        <ul>
+          <li>여권 &amp; 운전면허증</li>
+          <li>미국 입국 서류 (eTA/ESTA)</li>
+          <li>자동차 보험 증서</li>
+          <li>선크림 SPF 50+</li>
+          <li>편한 워킹슈즈</li>
+          <li>보조배터리 &amp; 충전기</li>
+          <li>수영복 &amp; 수건</li>
+        </ul>
+      </div>
+      <div class="packing-card">
+        <div class="packing-card-title">&#128161; 스마트 팁</div>
+        <ul>
+          <li>Universal 앱 설치 (대기시간 실시간 확인)</li>
+          <li>KSC 티켓 사전 온라인 구매 (할인)</li>
+          <li>ICON Park 콤보 티켓 온라인 구매</li>
+          <li>3월 올랜도 평균 기온: 17~27&deg;C</li>
+          <li>오후 소나기 가능 &mdash; 우비 챙길 것</li>
+          <li>국경 통과: 피크 시간 피하기 (새벽/야간 추천)</li>
+          <li>EZPass/SunPass 대여 (FL 톨게이트용)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pull-quote" style="margin-top: 32px;">
+      <p>"테마파크 뿐 아니라 에어보트 위의 악어, 수정빛 샘의 매너티, 로컬 푸드홀의 세비체까지 — 이것이 진짜 올랜도입니다."</p>
+      <cite>— 가족여행의 모든 것을 담은 5박 6일</cite>
+    </div>
+
+  </div><!-- .body -->
+</div><!-- .page -->
+
+</body>
+</html>
